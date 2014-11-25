@@ -54,6 +54,7 @@ ModelImporter:
     100096: upperLeg_L
     100098: upperLeg_R
     100100: Plane_002
+    100102: eKugel
     400000: ArmatureCharakter
     400002: //RootNode
     400004: Charakter_lowpoly
@@ -105,6 +106,7 @@ ModelImporter:
     400096: upperLeg_L
     400098: upperLeg_R
     400100: Plane_002
+    400102: eKugel
     2300000: ctrl_base
     2300002: ctrl_fingers
     2300004: ctrl_foot

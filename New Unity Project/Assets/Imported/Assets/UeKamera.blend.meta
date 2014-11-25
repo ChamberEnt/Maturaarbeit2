@@ -20,11 +20,13 @@ ModelImporter:
     2300004: gCam
     2300006: Lichtstrahl
     2300008: Plane
+    2300010: //RootNode
     3300000: _Kamera
     3300002: _Kamera_root
     3300004: gCam
     3300006: Lichtstrahl
     3300008: Plane
+    3300010: //RootNode
     4300000: _Kamera_root
     4300002: _Kamera
     4300004: Lichtstrahl
