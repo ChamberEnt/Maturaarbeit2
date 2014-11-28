@@ -118,6 +118,15 @@ ModelImporter:
     100224: ohneRahmen7
     100226: Tuer6
     100228: Tuer7
+    100230: Cube_018
+    100232: Cube_019
+    100234: Cube_020
+    100236: Cube_021
+    100238: Cube_022
+    100240: Cube_023
+    100242: Cube_024
+    100244: Cube_025
+    100246: TeleportAusloeser
     400000: Boden
     400002: Brett1
     400004: Brett2
@@ -233,6 +242,15 @@ ModelImporter:
     400224: ohneRahmen7
     400226: Tuer6
     400228: Tuer7
+    400230: Cube_018
+    400232: Cube_019
+    400234: Cube_020
+    400236: Cube_021
+    400238: Cube_022
+    400240: Cube_023
+    400242: Cube_024
+    400244: Cube_025
+    400246: TeleportAusloeser
     2300000: Boden
     2300002: Brett1
     2300004: Brett2
@@ -313,6 +331,14 @@ ModelImporter:
     2300154: ohneRahmen7
     2300156: Tuer6
     2300158: Tuer7
+    2300160: Cube_018
+    2300162: Cube_019
+    2300164: Cube_020
+    2300166: Cube_021
+    2300168: Cube_022
+    2300170: Cube_023
+    2300172: Cube_024
+    2300174: Cube_025
     3300000: Boden
     3300002: Brett1
     3300004: Brett2
@@ -393,6 +419,14 @@ ModelImporter:
     3300154: ohneRahmen7
     3300156: Tuer6
     3300158: Tuer7
+    3300160: Cube_018
+    3300162: Cube_019
+    3300164: Cube_020
+    3300166: Cube_021
+    3300168: Cube_022
+    3300170: Cube_023
+    3300172: Cube_024
+    3300174: Cube_025
     4300000: Boden
     4300002: Scale_Limit
     4300004: Treppe1
@@ -473,6 +507,14 @@ ModelImporter:
     4300154: ohneRahmen6
     4300156: Tuer7
     4300158: ohneRahmen7
+    4300160: Cube_025
+    4300162: Cube_024
+    4300164: Cube_023
+    4300166: Cube_022
+    4300168: Cube_021
+    4300170: Cube_020
+    4300172: Cube_019
+    4300174: Cube_018
     7400000: Default Take
     9500000: //RootNode
     13700000: Geb_ude
