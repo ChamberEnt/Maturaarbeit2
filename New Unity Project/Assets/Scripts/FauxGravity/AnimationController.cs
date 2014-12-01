@@ -22,15 +22,33 @@ public class AnimationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		animation.CrossFade("idle1");
+		SkinnedMeshRenderer sphere = GetComponentInChildren<SkinnedMeshRenderer>();
 
-		if (PlayerControllerFauxGravity.walking)
+		if (PlayerControllerFauxGravity.returnWalking())
 		{
 			animation.Play("walk3");
 		}
-		if (PlayerControllerFauxGravity.jumping)
+		if (PlayerControllerFauxGravity.returnJumping())
 		{
-			PlayerControllerFauxGravity.jumping = false;
+			PlayerControllerFauxGravity.setJumping(false);
 			animation.Play ("jumpStart");
+		}
+		if (PlayerControllerFauxGravity.returnRun())
+		{
+
+			sphere.SetBlendShapeWeight(1, 100);
+			GetComponentInParent<CapsuleCollider>().radius = 0.65f;
+			PlayerControllerFauxGravity.setDeltaGround(1.125f);
+			if(PlayerControllerFauxGravity.returnWalking())
+			{
+				//animation.Play ("rollen");
+			}
+		}
+		else if(sphere.GetBlendShapeWeight(1) == 100)
+		{
+			sphere.SetBlendShapeWeight(1,0);
+			GetComponentInParent<CapsuleCollider>().radius = 0.5f;
+			PlayerControllerFauxGravity.setDeltaGround(1.1f);
 		}
 	}
 }
