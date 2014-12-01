@@ -6,13 +6,13 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 	public static float moveSpeed; //Bewegungsgeschwindigkeit
 	public static Vector3 moveDirection; //Laufrichtung (vom Spieler aus gesehen, ohne Drehung)
 	private static Transform myTransform; //Position + Rotation + Grösse
-	public static float deltaGround; //Gibt an wie weit der abstand zwischen Boden und Objekt sein kann ohne das das Objekt nicht am Boden steht, wichtig bei schrägen Flächen
+	private static float deltaGround; //Gibt an wie weit der abstand zwischen Boden und Objekt sein kann ohne das das Objekt nicht am Boden steht, wichtig bei schrägen Flächen
 	public static bool isGrounded; //ob das Objekt den Boden berührt
 	private bool jump; //ob leertaste gedrückt wird/gesprungen wird
 	public static float jumpPower; //stärke des sprungs/höhe
-	public static bool jumping; //ob gesprungen wird, gebraucht um Spring animation zu starten
-	public static bool jumping2; //ob gesprungen wird, gebraucht um Lande animation zu starten (not yet)
-	public static bool walking; //ob gelaufen wird
+	private static bool jumping; //ob gesprungen wird, gebraucht um Spring animation zu starten
+	//public static bool jumping2; //ob gesprungen wird, gebraucht um Lande animation zu starten (not yet)
+	private static bool walking; //ob gelaufen wird
 	private static float groundLevel; //Auf welche höhe die Kamera eingestellt ist
 	private static bool run; //ob shift gedrückt wird/gerannt wird
 
@@ -24,22 +24,11 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 
 		deltaGround = 1.1f;
 		moveSpeed = 1.5f;
-		jumpPower = 1000;
+		jumpPower = 200;
 	}
 
 
 	void Update() {
-		/*
-		if (Input.GetKeyDown(KeyCode.LeftShift))
-		{
-			run = true;
-		}
-		else
-		{
-			run = false;
-		}
-		*/
-
 		//**************************************************************************************** moveDirection update (input):
 
 		moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical")).normalized;
@@ -54,24 +43,7 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 
 		run = Input.GetKey(KeyCode.LeftShift);
 
-		//**************************************************************************************** isGrounded update: (teils aus: http://answers.unity3d.com/questions/155907/basic-movement-walking-on-walls.html)
-		Ray ray;
-		RaycastHit hit;
-		ray = new Ray(myTransform.position, -myTransform.position); // direction of ray
-		Physics.Raycast(ray, out hit); // cast ray downwards
 
-		//Debug.Log ("hit.distance "+hit.distance);
-		Debug.DrawLine (transform.position, hit.point, Color.cyan);
-
-		if (hit.distance <= deltaGround)
-		{
-			isGrounded = true;
-			groundLevel = myTransform.position.magnitude;
-		}
-		else
-		{
-			isGrounded = false;
-		}
 		//Debug.Log ("groundlevelCamera: "+groundLevelCamera);
 
 		//********************************************************************************************* Jump update (input):
@@ -89,6 +61,26 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		//**************************************************************************************** isGrounded update: (teils aus: http://answers.unity3d.com/questions/155907/basic-movement-walking-on-walls.html)
+		Ray ray;
+		RaycastHit hit;
+		ray = new Ray(myTransform.position, -myTransform.position); // direction of ray
+		Physics.Raycast(ray, out hit); // cast ray downwards
+		
+		//Debug.Log ("hit.distance "+hit.distance);
+		Debug.DrawLine (transform.position, hit.point, Color.cyan);
+		
+		if (hit.distance <= deltaGround)
+		{
+			isGrounded = true;
+			groundLevel = myTransform.position.magnitude;
+		}
+		else
+		{
+			isGrounded = false;
+		}
+
+		//*****************************************************************************************Walking
 		if (moveDirection == Vector3.zero && isGrounded)
 		{
 			rigidbody.velocity = Vector3.zero;
@@ -109,7 +101,15 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 
 		if (jump)
 		{
-			rigidbody.AddForce(myTransform.position.normalized * jumpPower );
+			if(run)
+			{
+				//Debug.Log ("BigJump");
+				rigidbody.AddForce(myTransform.position.normalized * jumpPower * 5);
+			}
+			else
+			{
+				rigidbody.AddForce(myTransform.position.normalized * jumpPower);
+			}
 			jumping = true;
 			jump = false;
 		}
@@ -130,11 +130,15 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 	{
 		return jumping;
 	}
-
+	public static void setJumping (bool jumping_)
+	{
+		jumping = jumping_;
+	}
 	public static bool returnRun()
 	{
 		return run;
 	}
+	//für Anpassung der Grösse des Charakters
 	public static void multiplyAll(float multiplyer)
 	{
 		myTransform.localScale = new Vector3(multiplyer, multiplyer, multiplyer);
@@ -150,11 +154,12 @@ public class PlayerControllerFauxGravity : MonoBehaviour {
 	{
 		return myTransform.position;
 	}
-	
-	/*
-	public static bool returnRun()
+	public static bool returnWalking()
 	{
-		return run;
+		return walking;
 	}
-	*/
+	public static void setDeltaGround(float x)
+	{
+		deltaGround = x;
+	}
 }
