@@ -127,6 +127,8 @@ ModelImporter:
     100242: Cube_024
     100244: Cube_025
     100246: TeleportAusloeser
+    100248: Antennen
+    100250: Gelaender_Tore
     400000: Boden
     400002: Brett1
     400004: Brett2
@@ -251,6 +253,8 @@ ModelImporter:
     400242: Cube_024
     400244: Cube_025
     400246: TeleportAusloeser
+    400248: Antennen
+    400250: Gelaender_Tore
     2300000: Boden
     2300002: Brett1
     2300004: Brett2
@@ -339,6 +343,8 @@ ModelImporter:
     2300170: Cube_023
     2300172: Cube_024
     2300174: Cube_025
+    2300176: Antennen
+    2300178: Gelaender_Tore
     3300000: Boden
     3300002: Brett1
     3300004: Brett2
@@ -427,6 +433,8 @@ ModelImporter:
     3300170: Cube_023
     3300172: Cube_024
     3300174: Cube_025
+    3300176: Antennen
+    3300178: Gelaender_Tore
     4300000: Boden
     4300002: Scale_Limit
     4300004: Treppe1
@@ -515,6 +523,8 @@ ModelImporter:
     4300170: Cube_020
     4300172: Cube_019
     4300174: Cube_018
+    4300176: Gelaender_Tore
+    4300178: Antennen
     7400000: Default Take
     9500000: //RootNode
     13700000: Geb_ude
