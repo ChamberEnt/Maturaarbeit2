@@ -8,23 +8,28 @@ ModelImporter:
     100004: Luke_Deckel
     100006: Luke_Grenze
     100008: Luke_Treppe
+    100010: LukeCollider
     400000: //RootNode
     400002: Luke
     400004: Luke_Deckel
     400006: Luke_Grenze
     400008: Luke_Treppe
+    400010: LukeCollider
     2300000: Luke
     2300002: Luke_Deckel
     2300004: Luke_Grenze
     2300006: Luke_Treppe
+    2300008: LukeCollider
     3300000: Luke
     3300002: Luke_Deckel
     3300004: Luke_Grenze
     3300006: Luke_Treppe
+    3300008: LukeCollider
     4300000: Luke_Grenze
     4300002: Luke_Treppe
     4300004: Luke_Deckel
     4300006: Luke
+    4300008: LukeCollider
     7400000: Default Take
     9500000: //RootNode
   materials:

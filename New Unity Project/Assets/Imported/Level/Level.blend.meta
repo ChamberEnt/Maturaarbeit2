@@ -1523,6 +1523,28 @@ ModelImporter:
     103034: GitterFake
     103036: OpenDoors
     103038: Teleport
+    103040: Antenne_proxy
+    103042: Antenne_proxy_001
+    103044: Antenne_proxy_002
+    103046: Antenne_proxy_005
+    103048: LukeCollider_proxy
+    103050: LukeCollider_proxy_001
+    103052: GitterFake_001
+    103054: LukeCollider_proxy_003
+    103056: Gel_Mitte_proxy_596
+    103058: Gel_Tor_proxy
+    103060: Gel_Tor_proxy_001
+    103062: Gel_Tor_proxy_002
+    103064: Gel_TorRahmen_proxy
+    103066: Gel_TorRahmen_proxy_001
+    103068: gW2_Gebaeude_001
+    103070: Rand_Ku_innen_proxy_000
+    103072: Rand_Ku_innen_proxy_002
+    103074: Rand_Ku_innen_proxy_003
+    103076: Rand_Ku_innen_proxy_004
+    103078: Rand_Mitte_proxy_000
+    103080: Rand_Mitte_proxy_662
+    103082: Gel_Mitte_proxy_568
     400000: _Kamera_proxy
     400002: _Kamera_proxy_001
     400004: _Kamera_root_proxy
@@ -3043,6 +3065,28 @@ ModelImporter:
     403034: GitterFake
     403036: OpenDoors
     403038: Teleport
+    403040: Antenne_proxy
+    403042: Antenne_proxy_001
+    403044: Antenne_proxy_002
+    403046: Antenne_proxy_005
+    403048: LukeCollider_proxy
+    403050: LukeCollider_proxy_001
+    403052: GitterFake_001
+    403054: LukeCollider_proxy_003
+    403056: Gel_Mitte_proxy_596
+    403058: Gel_Tor_proxy
+    403060: Gel_Tor_proxy_001
+    403062: Gel_Tor_proxy_002
+    403064: Gel_TorRahmen_proxy
+    403066: Gel_TorRahmen_proxy_001
+    403068: gW2_Gebaeude_001
+    403070: Rand_Ku_innen_proxy_000
+    403072: Rand_Ku_innen_proxy_002
+    403074: Rand_Ku_innen_proxy_003
+    403076: Rand_Ku_innen_proxy_004
+    403078: Rand_Mitte_proxy_000
+    403080: Rand_Mitte_proxy_662
+    403082: Gel_Mitte_proxy_568
     2300000: Boden
     2300002: Charakter_lowpoly
     2300004: Ebenen
@@ -4316,6 +4360,27 @@ ModelImporter:
     2302540: Cube_023
     2302542: Cube_024
     2302544: Cube_025
+    2302546: Antenne_proxy
+    2302548: Antenne_proxy_001
+    2302550: Antenne_proxy_002
+    2302552: Antenne_proxy_005
+    2302554: LukeCollider_proxy
+    2302556: LukeCollider_proxy_001
+    2302558: LukeCollider_proxy_003
+    2302560: Gel_Mitte_proxy_596
+    2302562: Gel_Tor_proxy
+    2302564: Gel_Tor_proxy_001
+    2302566: Gel_Tor_proxy_002
+    2302568: Gel_TorRahmen_proxy
+    2302570: Gel_TorRahmen_proxy_001
+    2302572: gW2_Gebaeude_001
+    2302574: Rand_Ku_innen_proxy_000
+    2302576: Rand_Ku_innen_proxy_002
+    2302578: Rand_Ku_innen_proxy_003
+    2302580: Rand_Ku_innen_proxy_004
+    2302582: Rand_Mitte_proxy_000
+    2302584: Rand_Mitte_proxy_662
+    2302586: Gel_Mitte_proxy_568
     3300000: Boden
     3300002: Charakter_lowpoly
     3300004: Ebenen
@@ -5589,6 +5654,27 @@ ModelImporter:
     3302540: Cube_023
     3302542: Cube_024
     3302544: Cube_025
+    3302546: Antenne_proxy
+    3302548: Antenne_proxy_001
+    3302550: Antenne_proxy_002
+    3302552: Antenne_proxy_005
+    3302554: LukeCollider_proxy
+    3302556: LukeCollider_proxy_001
+    3302558: LukeCollider_proxy_003
+    3302560: Gel_Mitte_proxy_596
+    3302562: Gel_Tor_proxy
+    3302564: Gel_Tor_proxy_001
+    3302566: Gel_Tor_proxy_002
+    3302568: Gel_TorRahmen_proxy
+    3302570: Gel_TorRahmen_proxy_001
+    3302572: gW2_Gebaeude_001
+    3302574: Rand_Ku_innen_proxy_000
+    3302576: Rand_Ku_innen_proxy_002
+    3302578: Rand_Ku_innen_proxy_003
+    3302580: Rand_Ku_innen_proxy_004
+    3302582: Rand_Mitte_proxy_000
+    3302584: Rand_Mitte_proxy_662
+    3302586: Gel_Mitte_proxy_568
     4300000: Boden
     4300002: gCam-gZiel
     4300004: gW2
@@ -6863,6 +6949,27 @@ ModelImporter:
     4302542: Cube_011
     4302544: Cube_010
     4302546: Cube_009
+    4302548: LukeCollider_proxy_001
+    4302550: LukeCollider_proxy
+    4302552: Antenne_proxy_002
+    4302554: Antenne_proxy_001
+    4302556: Antenne_proxy
+    4302558: Antenne_proxy_005
+    4302560: LukeCollider_proxy_003
+    4302562: Gel_TorRahmen_proxy_001
+    4302564: Gel_Tor_proxy_001
+    4302566: Gel_TorRahmen_proxy
+    4302568: Gel_Tor_proxy
+    4302570: Gel_Tor_proxy_002
+    4302572: Rand_Mitte_proxy_000
+    4302574: Rand_Ku_innen_proxy_004
+    4302576: Rand_Ku_innen_proxy_003
+    4302578: Rand_Ku_innen_proxy_002
+    4302580: Rand_Ku_innen_proxy_000
+    4302582: Rand_Mitte_proxy_662
+    4302584: gW2_Gebaeude_001
+    4302586: Gel_Mitte_proxy_596
+    4302588: Gel_Mitte_proxy_568
     7400000: Default Take
     9500000: //RootNode
     13700000: gW2_Geb_ude
