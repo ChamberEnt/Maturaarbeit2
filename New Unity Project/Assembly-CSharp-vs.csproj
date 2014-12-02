@@ -46,28 +46,32 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\FauxGravity\AnimationController.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\AnimationDirection.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\CameraHeight.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\CharacterScaler.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\DeathSphere.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\DirectionIndicatorScript.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\DoorTeleporter.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\EnemyAwareness.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\EnemyAwareness2.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\FauxGravityAttractor.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\FauxGravityBody.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\FauxGravityBodyNotPlayer.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\ObjectTeleport.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\PlayerControllerFauxGravity.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\WaechterMovement.cs" />
-     <Compile Include="Assets\Scripts\FauxGravity\WaechterPoint.cs" />
+     <Compile Include="Assets\Scripts\Level\AnimationController.cs" />
+     <Compile Include="Assets\Scripts\Level\AnimationDirection.cs" />
+     <Compile Include="Assets\Scripts\Level\Attractor.cs" />
+     <Compile Include="Assets\Scripts\Level\Body.cs" />
+     <Compile Include="Assets\Scripts\Level\BodyNotPlayer.cs" />
+     <Compile Include="Assets\Scripts\Level\CameraHeight.cs" />
+     <Compile Include="Assets\Scripts\Level\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Level\CharacterScaler.cs" />
+     <Compile Include="Assets\Scripts\Level\DeathSphere.cs" />
+     <Compile Include="Assets\Scripts\Level\DirectionIndicatorScript.cs" />
+     <Compile Include="Assets\Scripts\Level\DoorTeleporter.cs" />
+     <Compile Include="Assets\Scripts\Level\EnemyAwareness.cs" />
+     <Compile Include="Assets\Scripts\Level\EnemyAwareness2.cs" />
+     <Compile Include="Assets\Scripts\Level\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Level\Level1.cs" />
+     <Compile Include="Assets\Scripts\Level\ObjectTeleport.cs" />
+     <Compile Include="Assets\Scripts\Level\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Level\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Level\WachterMovement2.cs" />
+     <Compile Include="Assets\Scripts\Level\WaechterMovement.cs" />
+     <Compile Include="Assets\Scripts\Level\WaechterPoint.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
-     <Compile Include="Assets\Scripts\MenuGameOver.cs" />
-     <Compile Include="Assets\Scripts\MenuIntro.cs" />
+     <Compile Include="Assets\Scripts\Menus\MenuGameOver.cs" />
+     <Compile Include="Assets\Scripts\Menus\MenuIntro.cs" />
+     <Compile Include="Assets\Scripts\Menus\StoryScreen.cs" />
+     <None Include="Assets\Text\StoryEN.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
