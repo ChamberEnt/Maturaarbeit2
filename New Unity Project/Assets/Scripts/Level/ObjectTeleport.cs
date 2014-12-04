@@ -4,8 +4,8 @@ using System.Collections;
 public class ObjectTeleport : MonoBehaviour {
 	private Transform myTransform;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		myTransform = transform;
 	}
 

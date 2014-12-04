@@ -52,10 +52,8 @@
      <Compile Include="Assets\Scripts\Level\Body.cs" />
      <Compile Include="Assets\Scripts\Level\BodyNotPlayer.cs" />
      <Compile Include="Assets\Scripts\Level\CameraHeight.cs" />
-     <Compile Include="Assets\Scripts\Level\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Level\CharacterScaler.cs" />
      <Compile Include="Assets\Scripts\Level\DeathSphere.cs" />
-     <Compile Include="Assets\Scripts\Level\DirectionIndicatorScript.cs" />
      <Compile Include="Assets\Scripts\Level\DoorTeleporter.cs" />
      <Compile Include="Assets\Scripts\Level\EindunkelnScript.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyAwareness.cs" />

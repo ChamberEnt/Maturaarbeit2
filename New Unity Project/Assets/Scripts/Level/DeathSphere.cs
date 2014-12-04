@@ -4,7 +4,6 @@ using System.Collections;
 public class DeathSphere : MonoBehaviour {
 	private Collider player;
 
-	// Use this for initialization
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "Player")

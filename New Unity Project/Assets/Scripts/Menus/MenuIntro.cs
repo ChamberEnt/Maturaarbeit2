@@ -2,9 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class MenuIntro : MonoBehaviour {
-	
-	//int highscore = Highscore.highscore;
-	
+
 	void OnGUI()
 	{
 		GUI.Label (new Rect(Screen.width/2-75,20,150,50),"Welcome to MAVERICK");

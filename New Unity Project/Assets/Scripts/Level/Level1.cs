@@ -62,7 +62,6 @@ public class Level1 : MonoBehaviour {
 				GameObject.Find("Level").GetComponent<EindunkelnScript>().darken ();
 				StartCoroutine(GameOverTimer());
 			}
-			//GameOver (1);
 		}
 		canSeePlayer = false;
 	}

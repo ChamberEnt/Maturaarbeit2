@@ -7,19 +7,16 @@ public class EnemyAwareness : MonoBehaviour {
 	public float visibilityDistance; //Sichtweite
 	private Transform myTransform; //Position + Rotation + Grösse
 
-
-	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		myTransform = transform;
 		fieldOfViewDegrees = 58;
 		visibilityDistance = 4.15f;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		Vector3 localForward = transform.forward*visibilityDistance+transform.position;
 		Debug.DrawLine(transform.position, localForward, Color.green);
-		//Debug.Log ("CanSeePlayer: "+CanSeePlayer());
 	}
 
 	void FixedUpdate()
@@ -29,7 +26,6 @@ public class EnemyAwareness : MonoBehaviour {
 
 	private void CanSeePlayer()
 	{
-		//Debug.Log (Time.time);
 		GameObject Player = GameObject.Find("Player");
 		RaycastHit hit;
 		Vector3 rayDirection = (Player.transform.position - myTransform.transform.position*1.01f).normalized;
@@ -38,7 +34,6 @@ public class EnemyAwareness : MonoBehaviour {
 		Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.cyan);
 		if ((Vector3.Angle(rayDirection, myTransform.forward)) <= fieldOfViewDegrees * 0.5f)
 		{
-			//Debug.Log (hit.distance);
 			if (hit.distance <= visibilityDistance)
 			{
 				Debug.DrawLine(myTransform.position, hit.point, Color.red);
