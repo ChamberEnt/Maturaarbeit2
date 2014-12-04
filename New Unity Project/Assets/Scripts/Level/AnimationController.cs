@@ -17,6 +17,10 @@ public class AnimationController : MonoBehaviour {
 		animation["jumpStart"].layer = 1;
 		animation["jumpEnd"].wrapMode = WrapMode.Once;
 		animation["jumpEnd"].layer = 1;
+		//animation["RollenStart"].layer = 1;
+		//animation["RollenStart"].wrapMode = WrapMode.Once;
+		//animation["RollenEnd"].wrapMode = WrapMode.Once;
+
 	}
 	
 	// Update is called once per frame
@@ -34,7 +38,7 @@ public class AnimationController : MonoBehaviour {
 			PlayerController.setJumping(false);
 			animation.Play ("jumpStart");
 		}
-		if (PlayerController.returnRun())
+		if (PlayerController.returnRoll())
 		{
 
 			sphere.SetBlendShapeWeight(0, 100);
@@ -42,7 +46,7 @@ public class AnimationController : MonoBehaviour {
 			PlayerController.setDeltaGround(1.125f);
 			if(PlayerController.returnWalking())
 			{
-				//animation.Play ("rollen");
+				//animation.Play ("Rollen");
 			}
 		}
 		else if(sphere.GetBlendShapeWeight(0) == 100)

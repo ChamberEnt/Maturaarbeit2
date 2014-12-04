@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DoorTeleporter : MonoBehaviour {
-	public Vector3 newPos;
+	public GameObject newPos;
 
 	// Use this for initialization
 	void Start () {

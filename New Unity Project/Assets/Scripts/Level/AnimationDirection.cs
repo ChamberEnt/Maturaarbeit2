@@ -82,7 +82,7 @@ public class AnimationDirection : MonoBehaviour {
 			// Quaternion targetRotation = new Quaternion(0, degreesRotated - degreesToRotate, 0, transform.localRotation.w);
 			if (targetRotation != transform.localRotation)
 			{
-				if (PlayerController.returnRun())
+				if (PlayerController.returnRoll())
 				{
 					transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, turnSpeed * Time.deltaTime * 3);
 				}

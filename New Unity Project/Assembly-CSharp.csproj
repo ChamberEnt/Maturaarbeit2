@@ -64,10 +64,7 @@
      <Compile Include="Assets\Scripts\Level\ObjectTeleport.cs" />
      <Compile Include="Assets\Scripts\Level\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Level\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\Level\WachterMovement2.cs" />
-     <Compile Include="Assets\Scripts\Level\WaechterMovement.cs" />
-     <Compile Include="Assets\Scripts\Level\WaechterPoint.cs" />
-     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\Level\WaechterMovement2.cs" />
      <Compile Include="Assets\Scripts\Menus\MenuGameOver.cs" />
      <Compile Include="Assets\Scripts\Menus\MenuIntro.cs" />
      <Compile Include="Assets\Scripts\Menus\StoryScreen.cs" />

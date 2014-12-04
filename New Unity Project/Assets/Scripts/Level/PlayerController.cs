@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviour {
 	private static float deltaGround; //Gibt an wie weit der abstand zwischen Boden und Objekt sein kann ohne das das Objekt nicht am Boden steht, wichtig bei schrägen Flächen
 	private static float beginDeltaGround;
 	public static bool isGrounded; //ob das Objekt den Boden berührt
-	private static bool jump; //ob leertaste gedrückt wird/gesprungen wird
-	public static float jumpPower; //stärke des sprungs/höhe
-	private static bool jumping; //ob gesprungen wird, gebraucht um Spring animation zu starten
-	//public static bool jumping2; //ob gesprungen wird, gebraucht um Lande animation zu starten (not yet)
+	private static bool jump; //ob leertaste gedrückt wird/gesprollgen wird
+	public static float jumpPower; //stärke des sprollgs/höhe
+	private static bool jumping; //ob gesprollgen wird, gebraucht um Spring animation zu starten
+	//public static bool jumping2; //ob gesprollgen wird, gebraucht um Lande animation zu starten (not yet)
 	private static bool walking; //ob gelaufen wird
 	private static float groundLevel; //Auf welche höhe die Kamera eingestellt ist
-	private static bool run; //ob shift gedrückt wird/gerannt wird
+	private static bool roll; //ob shift gedrückt wird/gerannt wird
 	
 	void Start () {
 		myTransform = transform;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 			walking = true;
 		}
 		
-		run = Input.GetKey(KeyCode.LeftShift);
+		roll = Input.GetKey(KeyCode.LeftShift);
 		
 		
 		//Debug.Log ("isGrounded: "+isGrounded);
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 		else
 		{
 			// aus: https://www.youtube.com/watch?v=gHeQ8Hr92P4)
-			if (run)
+			if (roll)
 			{
 				rigidbody.MovePosition(myTransform.position + transform.TransformDirection(moveDirection)*moveSpeed*Time.deltaTime*7); //problem mit local moveDirection (drehen) anscheinend nicht mit local moveDirection sondern mit dem Attractor ein problem EDIT: wut?
 			}
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
 		
 		if (jump)
 		{
-			if(run)
+			if(roll)
 			{
 				//Debug.Log ("BigJump");
 				rigidbody.AddForce(myTransform.position.normalized * jumpPower * 5);
@@ -123,8 +123,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	
-	
-	void GameOver(int cause)
+	private void GameOver(int cause)
 	{
 		MenuGameOver.setCause(cause);
 		Application.LoadLevel(3);
@@ -142,9 +141,9 @@ public class PlayerController : MonoBehaviour {
 	{
 		jumping = jumping_;
 	}
-	public static bool returnRun()
+	public static bool returnRoll()
 	{
-		return run;
+		return roll;
 	}
 	//für Anpassung der Grösse des Charakters
 	public static void multiplyAll(float multiplyer)
@@ -152,7 +151,7 @@ public class PlayerController : MonoBehaviour {
 		myTransform.localScale = beginMyScale;
 		moveSpeed = beginMoveSpeed*multiplyer;
 		deltaGround = beginDeltaGround*multiplyer;
-		//jumpPower?
+		jumpPower = jumpPower*multiplyer;
 	}
 	public static float returnGroundLevel()
 	{

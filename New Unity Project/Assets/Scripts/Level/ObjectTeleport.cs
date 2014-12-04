@@ -9,9 +9,8 @@ public class ObjectTeleport : MonoBehaviour {
 		myTransform = transform;
 	}
 
-	void Teleport(Vector3 newPos)
+	void Teleport(GameObject newPos)
 	{
-		myTransform.position = newPos;
-		//eventuell noch rotation des Charakters anpassen, dass er "aus" der Türe kommt.
+		myTransform.position = newPos.transform.position;
 	}
 }

@@ -12,7 +12,7 @@ public class Body : MonoBehaviour {
 		rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 		myTransform = transform;
 	}
-	
+
 	void FixedUpdate () {
 		//aus: https://www.youtube.com/watch?v=gHeQ8Hr92P4)
 		if (attractor)
