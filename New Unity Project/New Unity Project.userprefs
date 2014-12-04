@@ -1,22 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\Level1.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\AnimationController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Level\PlayerController.cs" Line="28" Column="97" />
-      <File FileName="Assets\Scripts\Menus\MenuGameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\AnimationDirection.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\PlayerController.cs" Line="181" Column="8" />
+      <File FileName="Assets\Scripts\Menus\MenuGameOver.cs" Line="41" Column="1" />
       <File FileName="Assets\Scripts\Level\Attractor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level\Body.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level\BodyNotPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\BodyNotPlayer.cs" Line="36" Column="2" />
       <File FileName="Assets\Scripts\Level\WaechterMovement2.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level\Level1.cs" Line="62" Column="72" />
       <File FileName="Assets\Scripts\Level\EnemyAwareness.cs" Line="47" Column="35" />
       <File FileName="Assets\Scripts\Level\DoorTeleporter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level\ObjectTeleport.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level\OpenDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\MenuIntro.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\StoryScreen.cs" Line="63" Column="4" />
-      <File FileName="Assets\Scripts\Level\EindunkelnScript.cs" Line="34" Column="32" />
-      <File FileName="Assets\Scripts\Level\DeathSphere.cs" Line="13" Column="71" />
+      <File FileName="Assets\Scripts\Level\OpenDoor.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Menus\MenuIntro.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\Menus\StoryScreen.cs" Line="69" Column="1" />
+      <File FileName="Assets\Scripts\Level\EindunkelnScript.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\Level\DeathSphere.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\Level\AnimationController.cs" Line="57" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

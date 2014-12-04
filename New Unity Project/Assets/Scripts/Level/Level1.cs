@@ -59,7 +59,7 @@ public class Level1 : MonoBehaviour {
 		{
 			if (first)
 			{
-				GameObject.Find("Level").GetComponent<EindunkelnScript>().darken();
+				GameObject.Find("Level").GetComponent<EindunkelnScript>().darken ();
 				StartCoroutine(GameOverTimer());
 			}
 			//GameOver (1);

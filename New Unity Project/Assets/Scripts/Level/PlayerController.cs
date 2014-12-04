@@ -93,8 +93,7 @@ public class PlayerController : MonoBehaviour {
 		//*****************************************************************************************Walking
 		if (moveDirection == Vector3.zero && isGrounded)
 		{
-			rigidbody.velocity = Vector3.zero;
-			rigidbody.angularVelocity = Vector3.zero;
+			setVelocityToZero();
 		}
 		else
 		{
@@ -178,5 +177,10 @@ public class PlayerController : MonoBehaviour {
 	public static bool returnHasKey()
 	{
 		return hasKey;
+	}
+	public void setVelocityToZero()
+	{
+		rigidbody.velocity = Vector3.zero;
+		rigidbody.angularVelocity = Vector3.zero;
 	}
 }

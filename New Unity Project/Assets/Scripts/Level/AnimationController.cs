@@ -17,9 +17,7 @@ public class AnimationController : MonoBehaviour {
 		animation["jumpStart"].layer = 1;
 		animation["jumpEnd"].wrapMode = WrapMode.Once;
 		animation["jumpEnd"].layer = 1;
-		//animation["RollenStart"].layer = 1;
-		//animation["RollenStart"].wrapMode = WrapMode.Once;
-		//animation["RollenEnd"].wrapMode = WrapMode.Once;
+		animation["Rollen2"].layer = 1;
 
 	}
 	
@@ -40,20 +38,21 @@ public class AnimationController : MonoBehaviour {
 		}
 		if (PlayerController.returnRoll())
 		{
-
 			sphere.SetBlendShapeWeight(0, 100);
 			GetComponentInParent<CapsuleCollider>().radius = 0.65f;
 			PlayerController.setDeltaGround(1.125f);
 			if(PlayerController.returnWalking())
 			{
-				//animation.Play ("Rollen");
+				animation.Play ("Rollen2");
 			}
 		}
 		else if(sphere.GetBlendShapeWeight(0) == 100)
 		{
+			GameObject.Find ("Player").GetComponent<PlayerController>().setVelocityToZero();
 			sphere.SetBlendShapeWeight(0,0);
 			GetComponentInParent<CapsuleCollider>().radius = 0.5f;
 			PlayerController.setDeltaGround(1.1f);
+			animation.Stop ("Rollen2");
 		}
 	}
 }
