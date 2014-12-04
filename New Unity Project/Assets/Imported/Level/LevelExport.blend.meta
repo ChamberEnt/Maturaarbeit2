@@ -131,6 +131,30 @@ ModelImporter:
     100250: Gelaender_Tore
     100252: UmgebungAussen
     100254: UmgebungInnen
+    100256: Empty
+    100258: Empty_001
+    100260: KoordinatenKameras
+    100262: Cube_002
+    100264: Cube_003
+    100266: TeleportEnd
+    100268: TeleportEnd_001
+    100270: TeleportEnd_002
+    100272: TeleportEnd_003
+    100274: TeleportEnd_004
+    100276: TeleportEnd_005
+    100278: TeleportEnd_006
+    100280: TeleportEnd_007
+    100282: TeleportEnd_008
+    100284: TeleportStart
+    100286: TeleportStart_001
+    100288: TeleportStart_002
+    100290: TeleportStart_003
+    100292: TeleportStart_004
+    100294: TeleportStart_005
+    100296: TeleportStart_006
+    100298: TeleportStart_007
+    100300: TeleportStart_008
+    100302: TuerOpener
     400000: Boden
     400002: Brett1
     400004: Brett2
@@ -259,6 +283,30 @@ ModelImporter:
     400250: Gelaender_Tore
     400252: UmgebungAussen
     400254: UmgebungInnen
+    400256: Empty
+    400258: Empty_001
+    400260: KoordinatenKameras
+    400262: Cube_002
+    400264: Cube_003
+    400266: TeleportEnd
+    400268: TeleportEnd_001
+    400270: TeleportEnd_002
+    400272: TeleportEnd_003
+    400274: TeleportEnd_004
+    400276: TeleportEnd_005
+    400278: TeleportEnd_006
+    400280: TeleportEnd_007
+    400282: TeleportEnd_008
+    400284: TeleportStart
+    400286: TeleportStart_001
+    400288: TeleportStart_002
+    400290: TeleportStart_003
+    400292: TeleportStart_004
+    400294: TeleportStart_005
+    400296: TeleportStart_006
+    400298: TeleportStart_007
+    400300: TeleportStart_008
+    400302: TuerOpener
     2300000: Boden
     2300002: Brett1
     2300004: Brett2
@@ -351,6 +399,8 @@ ModelImporter:
     2300178: Gelaender_Tore
     2300180: UmgebungAussen
     2300182: UmgebungInnen
+    2300184: Cube_002
+    2300186: Cube_003
     3300000: Boden
     3300002: Brett1
     3300004: Brett2
@@ -443,6 +493,8 @@ ModelImporter:
     3300178: Gelaender_Tore
     3300180: UmgebungAussen
     3300182: UmgebungInnen
+    3300184: Cube_002
+    3300186: Cube_003
     4300000: Boden
     4300002: Scale_Limit
     4300004: Treppe1
@@ -535,6 +587,8 @@ ModelImporter:
     4300178: Antennen
     4300180: UmgebungInnen
     4300182: UmgebungAussen
+    4300184: Cube_003
+    4300186: Cube_002
     7400000: Default Take
     9500000: //RootNode
     13700000: Geb_ude

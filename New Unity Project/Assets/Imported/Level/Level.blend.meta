@@ -1545,6 +1545,7 @@ ModelImporter:
     103078: Rand_Mitte_proxy_000
     103080: Rand_Mitte_proxy_662
     103082: Gel_Mitte_proxy_568
+    103084: LocationKamera
     400000: _Kamera_proxy
     400002: _Kamera_proxy_001
     400004: _Kamera_root_proxy
@@ -3087,6 +3088,7 @@ ModelImporter:
     403078: Rand_Mitte_proxy_000
     403080: Rand_Mitte_proxy_662
     403082: Gel_Mitte_proxy_568
+    403084: LocationKamera
     2300000: Boden
     2300002: Charakter_lowpoly
     2300004: Ebenen
@@ -4381,6 +4383,7 @@ ModelImporter:
     2302582: Rand_Mitte_proxy_000
     2302584: Rand_Mitte_proxy_662
     2302586: Gel_Mitte_proxy_568
+    2302588: LocationKamera
     3300000: Boden
     3300002: Charakter_lowpoly
     3300004: Ebenen
@@ -5675,6 +5678,7 @@ ModelImporter:
     3302582: Rand_Mitte_proxy_000
     3302584: Rand_Mitte_proxy_662
     3302586: Gel_Mitte_proxy_568
+    3302588: LocationKamera
     4300000: Boden
     4300002: gCam-gZiel
     4300004: gW2
@@ -6970,6 +6974,7 @@ ModelImporter:
     4302584: gW2_Gebaeude_001
     4302586: Gel_Mitte_proxy_596
     4302588: Gel_Mitte_proxy_568
+    4302590: LocationKamera
     7400000: Default Take
     9500000: //RootNode
     13700000: gW2_Geb_ude
