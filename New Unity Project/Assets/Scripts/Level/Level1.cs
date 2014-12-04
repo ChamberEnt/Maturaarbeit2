@@ -78,6 +78,6 @@ public class Level1 : MonoBehaviour {
 	void GameOver(int cause)
 	{
 		MenuGameOver.setCause(cause);
-		Application.LoadLevel(3);
+		Application.LoadLevel(2);
 	}
 }

@@ -9,7 +9,7 @@ public class AnimationController : MonoBehaviour {
 		animation["jumpStart"].layer = 1;
 		animation["jumpEnd"].wrapMode = WrapMode.Once;
 		animation["jumpEnd"].layer = 1;
-		animation["Rollen2"].layer = 1;
+		//animation["Rollen2"].layer = 1;
 	}
 
 	void Update ()

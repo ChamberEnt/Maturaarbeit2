@@ -16,6 +16,6 @@ public class DeathSphere : MonoBehaviour {
 	IEnumerator GameOverTimer()
 	{
 		yield return new WaitForSeconds(3);
-		player.gameObject.SendMessage("GameOver", 0, SendMessageOptions.DontRequireReceiver);
+		GameObject.Find("Level").SendMessage("GameOver", 0, SendMessageOptions.DontRequireReceiver);
 	}
 }
