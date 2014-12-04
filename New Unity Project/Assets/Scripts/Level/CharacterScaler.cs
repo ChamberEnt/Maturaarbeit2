@@ -8,13 +8,15 @@ public class CharacterScaler : MonoBehaviour {
 	private static float currentMultiplyer;
 	private float startMagnitude;
 
-	void Start () {
+	void Start ()
+	{
 		myTransform = transform;
 		startMagnitude = myTransform.position.magnitude;
 		currentMultiplyer = 1;
 	}
 
-	void FixedUpdate () {
+	void FixedUpdate ()
+	{
 		multiplyer = myTransform.position.magnitude/startMagnitude;
 		if(currentMultiplyer >= multiplyer*1.1 || currentMultiplyer <= multiplyer*0.9)
 		{

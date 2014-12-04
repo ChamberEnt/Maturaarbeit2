@@ -30,7 +30,8 @@ public class WaechterMovement2 : MonoBehaviour {
 		
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		if (punkte != null)
 		{
 			if ((punkte[zaehler].GetComponent<Transform>().position - myTransform.position).magnitude >= (punkte[zaehler].GetComponent<Transform>().position - (punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position)).magnitude)
@@ -41,22 +42,14 @@ public class WaechterMovement2 : MonoBehaviour {
 				turning = true;
 				walking = false;
 				rigidbody.velocity = Vector3.zero;
-				//Debug.Log ("Time: "+Time.time+"  walking: "+walking);
 			}
 			Ray ray;
 			RaycastHit hit;
 			ray = new Ray(myTransform.position, -myTransform.position); // origin, direction of ray
 			Physics.Raycast(ray, out hit); // cast ray downwards
-			
-			//Debug.Log ("hit.distance "+hit.distance);
-			//Debug.DrawLine (transform.position, hit.point, Color.cyan);
-			
 			if (hit.distance <= 0.1f)
 			{
 				isGrounded = true;
-				//rigidbody.velocity = Vector3.zero;
-				//rigidbody.angularVelocity = Vector3.zero;
-				//Debug.Log (""+isGrounded);
 			}
 			else
 			{
@@ -80,7 +73,6 @@ public class WaechterMovement2 : MonoBehaviour {
 		}
 		else if (walking)
 		{
-			//Debug.DrawRay(myTransform.position*1.01f, (punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position).normalized*moveSpeed, Color.yellow);
 			rigidbody.AddForce((punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position).normalized*moveSpeed*10);
 		}
 	}
@@ -89,8 +81,6 @@ public class WaechterMovement2 : MonoBehaviour {
 	{
 		float time = Time.time;
 		yield return new WaitForSeconds(timer);
-		//Debug.Log ("TimerAbgelaufen: "+(Time.time-time));
-		//startTurning = false;
 		turning = false;
 		walking = true;
 		StopCoroutine(turnTimer(1));

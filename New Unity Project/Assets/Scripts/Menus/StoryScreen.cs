@@ -14,7 +14,8 @@ public class StoryScreen : MonoBehaviour {
 		GUI.Label (new Rect(20,685,Screen.width-20,40), "Press any key to continue...");
 	}
 
-	void Update () {
+	void Update ()
+	{
 		if(Input.anyKey)
 		{
 			Application.LoadLevel(1);
@@ -24,22 +25,12 @@ public class StoryScreen : MonoBehaviour {
 	//aus: http://answers.unity3d.com/questions/279750/loading-data-from-a-txt-file-c.html
 	private string Load(string fileName)
 	{
-		// Handle any problems that might arise when reading the text
 		try
 		{
 			string file = "";
-			// Create a new StreamReader, tell it which file to read and what encoding the file
-			// was saved as
 			StreamReader theReader = new StreamReader(Application.dataPath+fileName, Encoding.Default);
-			
-			// Immediately clean up the reader after this block of code is done.
-			// You generally use the "using" statement for potentially memory-intensive objects
-			// instead of relying on garbage collection.
-			// (Do not confuse this with the using directive for namespace at the 
-			// beginning of a class!)
 			using (theReader)
 			{
-				// While there's lines left in the text file, do this:
 				string line;
 				do
 				{
@@ -51,14 +42,10 @@ public class StoryScreen : MonoBehaviour {
 					}
 				}
 				while (line != null);
-				// Done reading, close the reader and return true to broadcast success
 				theReader.Close();
 				return file;
 			}
 		}
-		
-		// If anything broke in the try block, we throw an exception with information
-		// on what didn't work
 		catch (Exception e)
 		{
 			Console.WriteLine("{0}\n", e.Message);
