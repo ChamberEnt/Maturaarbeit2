@@ -57,11 +57,14 @@
      <Compile Include="Assets\Scripts\Level\DeathSphere.cs" />
      <Compile Include="Assets\Scripts\Level\DirectionIndicatorScript.cs" />
      <Compile Include="Assets\Scripts\Level\DoorTeleporter.cs" />
+     <Compile Include="Assets\Scripts\Level\EindunkelnScript.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyAwareness.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyAwareness2.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Level\Level1.cs" />
+     <Compile Include="Assets\Scripts\Level\LevelComplete.cs" />
      <Compile Include="Assets\Scripts\Level\ObjectTeleport.cs" />
+     <Compile Include="Assets\Scripts\Level\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\Level\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Level\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Level\WaechterMovement2.cs" />

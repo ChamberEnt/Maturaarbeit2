@@ -7,17 +7,17 @@ public class MenuIntro : MonoBehaviour {
 	
 	void OnGUI()
 	{
-		GUI.Label (new Rect(20,20,150,50),"Welcome to MAVERICK");
+		GUI.Label (new Rect(Screen.width/2-75,20,150,50),"Welcome to MAVERICK");
 
-		if (GUI.Button (new Rect(20,90,150,50),"Start Level 1"))
+		if (GUI.Button (new Rect(Screen.width/2-75,90,150,50),"Start Level 1"))
 		{
 			Application.LoadLevel(2);
 		}
-		if (GUI.Button (new Rect(20,160,150,50),"Story"))
+		if (GUI.Button (new Rect(Screen.width/2-75,160,150,50),"Story"))
 		{
 			Application.LoadLevel(0);
 		}
-		if (GUI.Button (new Rect(20,230,150,50),"Exit"))
+		if (GUI.Button (new Rect(Screen.width/2-75,230,150,50),"Exit"))
 		{
 			Application.Quit();
 		}

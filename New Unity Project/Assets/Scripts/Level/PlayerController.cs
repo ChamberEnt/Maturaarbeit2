@@ -18,12 +18,14 @@ public class PlayerController : MonoBehaviour {
 	private static bool walking; //ob gelaufen wird
 	private static float groundLevel; //Auf welche höhe die Kamera eingestellt ist
 	private static bool roll; //ob shift gedrückt wird/gerannt wird
+	private static bool hasKey;
 	
 	void Start () {
 		myTransform = transform;
 		jump = false;
 		jumping = false;
 		walking = false;
+		hasKey = true;///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! false nach einfügen des Schlüssels
 
 		beginMyScale = new Vector3(1,1,1);
 		deltaGround = 1.1f;
@@ -168,5 +170,13 @@ public class PlayerController : MonoBehaviour {
 	public static void setDeltaGround(float newDeltaGround)
 	{
 		deltaGround = newDeltaGround;
+	}
+	public static void setHasKey(bool newHasKey)
+	{
+		hasKey = newHasKey;
+	}
+	public static bool returnHasKey()
+	{
+		return hasKey;
 	}
 }

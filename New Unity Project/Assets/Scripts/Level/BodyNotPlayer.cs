@@ -5,7 +5,7 @@ using System.Collections;
 public class BodyNotPlayer : MonoBehaviour {
 	
 	private Attractor attractor; //Planet/Level
-	public Transform myTransform; //Position + Rotation + Grösse
+	private Transform myTransform; //Position + Rotation + Grösse
 	private bool isGrounded;
 
 	
@@ -31,7 +31,6 @@ public class BodyNotPlayer : MonoBehaviour {
 	public void setAttractor(Attractor newAttractor)
 	{
 		attractor = newAttractor;
-		Debug.Log(""+attractor);
 	}
 	
 }

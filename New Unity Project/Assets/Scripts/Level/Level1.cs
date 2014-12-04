@@ -10,8 +10,12 @@ public class Level1 : MonoBehaviour {
 	public GameObject[] listeWaechterPunkte5;
 	public GameObject[] listeWaechterPunkte6;
 	public GameObject level;
+	public GameObject kamera;
+	public GameObject[] kameraPositionen;
+	private GameObject[] listeKameras;
 	private GameObject[] listeWaechter;
 	private static bool canSeePlayer;
+	private bool first;
 	
 	void OnGUI()
 	{
@@ -19,9 +23,11 @@ public class Level1 : MonoBehaviour {
 	}
 	
 	void Awake () {
+		first = true;
 		GameObject[][] listenWaechterPunkte = new GameObject[][]{listeWaechterPunkte1,listeWaechterPunkte2,listeWaechterPunkte3,listeWaechterPunkte4,listeWaechterPunkte5, listeWaechterPunkte6};
 		//evt. statt 6 listenWaechterPunkte.GetLength(x) x = dimension 0 oder 1?
 		listeWaechter = new GameObject[6];
+		listeKameras = new GameObject[kameraPositionen.GetLength(0)];
 
 		for(int i=0; i < listenWaechterPunkte.GetLength(0); i++)
 		{
@@ -30,6 +36,13 @@ public class Level1 : MonoBehaviour {
 			newWaechter.GetComponent<WaechterMovement2>().setPunkte(listenWaechterPunkte[i]);
 			listeWaechter[i] = newWaechter;
 		}
+		/*
+		for(int i=0; i < kameraPositionen.GetLength(0); i++)
+		{
+			GameObject newKamera = (GameObject) Instantiate(kamera, kameraPositionen[i].transform.position, kameraPositionen[i].transform.rotation);
+			listeKameras[i] = newKamera;
+		}
+		*/
 	}
 
 	void Update ()
@@ -44,7 +57,12 @@ public class Level1 : MonoBehaviour {
 		}
 		if (canSeePlayer)
 		{
-			GameOver (1);
+			if (first)
+			{
+				GameObject.Find("Level").GetComponent<EindunkelnScript>().darken();
+				StartCoroutine(GameOverTimer());
+			}
+			//GameOver (1);
 		}
 		canSeePlayer = false;
 	}
@@ -52,7 +70,12 @@ public class Level1 : MonoBehaviour {
 	{
 		canSeePlayer = newCanSeePlayer;
 	}
-
+	IEnumerator GameOverTimer()
+	{
+		first = false;
+		yield return new WaitForSeconds(3);
+		GameOver(1);
+	}
 	void GameOver(int cause)
 	{
 		MenuGameOver.setCause(cause);

@@ -2,13 +2,21 @@
 using System.Collections;
 
 public class DeathSphere : MonoBehaviour {
+	private Collider player;
 
 	// Use this for initialization
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			other.gameObject.SendMessage("GameOver", 0, SendMessageOptions.DontRequireReceiver);
+			player = other;
+			GameObject.Find("Level").GetComponent<EindunkelnScript>().darken();
+			StartCoroutine(GameOverTimer());
 		}
+	}
+	IEnumerator GameOverTimer()
+	{
+		yield return new WaitForSeconds(3);
+		player.gameObject.SendMessage("GameOver", 0, SendMessageOptions.DontRequireReceiver);
 	}
 }

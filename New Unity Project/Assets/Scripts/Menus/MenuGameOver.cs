@@ -20,14 +20,14 @@ public class MenuGameOver : MonoBehaviour {
 			break;
 		}
 
-		GUI.Label (new Rect(20,20,150,70),"Don't punch the Screen! But we have to tell you, "+ deathText);
+		GUI.Label (new Rect(Screen.width/2-75,20,150,70),"Don't punch the Screen! But we have to tell you, "+ deathText);
 
-		if (GUI.Button (new Rect(20,110,150,50),"Retry"))
+		if (GUI.Button (new Rect(Screen.width/2-75,110,150,50),"Retry"))
 		{
 			Application.LoadLevel(2);
 		}
 		
-		if (GUI.Button (new Rect(20,180,150,50),"Menu"))
+		if (GUI.Button (new Rect(Screen.width/2-75,180,150,50),"Menu"))
 		{
 			Application.LoadLevel(1);
 		}
