@@ -54,11 +54,15 @@
      <Compile Include="Assets\Scripts\Level\CameraHeight.cs" />
      <Compile Include="Assets\Scripts\Level\CharacterScaler.cs" />
      <Compile Include="Assets\Scripts\Level\DeathSphere.cs" />
+     <Compile Include="Assets\Scripts\Level\DestroyThis.cs" />
      <Compile Include="Assets\Scripts\Level\DoorTeleporter.cs" />
      <Compile Include="Assets\Scripts\Level\EindunkelnScript.cs" />
+     <Compile Include="Assets\Scripts\Level\EndGameScreen.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyAwareness.cs" />
-     <Compile Include="Assets\Scripts\Level\EnemyAwareness2.cs" />
      <Compile Include="Assets\Scripts\Level\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Level\ExplorationMode.cs" />
+     <Compile Include="Assets\Scripts\Level\KameraAusrichter.cs" />
+     <Compile Include="Assets\Scripts\Level\KeyCollider.cs" />
      <Compile Include="Assets\Scripts\Level\Level1.cs" />
      <Compile Include="Assets\Scripts\Level\LevelComplete.cs" />
      <Compile Include="Assets\Scripts\Level\ObjectTeleport.cs" />

@@ -16,7 +16,7 @@ public class WaechterMovement2 : MonoBehaviour {
 	private bool isGrounded;
 	
 	void Awake () {
-		turnSpeed = 15;
+		turnSpeed = 1;
 		moveSpeed = 5;
 		myTransform = transform;
 		maxSpeed = moveSpeed*2;
@@ -65,11 +65,17 @@ public class WaechterMovement2 : MonoBehaviour {
 		{
 			turn ();
 			startTurning = false;
-			StartCoroutine(turnTimer((Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position)/90)/(turnSpeed/16)));
+			//StartCoroutine(turnTimer((Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position)/90)/(turnSpeed/16)));
 		}
 		else if (turning)
 		{
 			turn ();
+			//Debug.Log (Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position)+Vector3.Angle(myTransform.position, punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position));
+			if(Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position)+Vector3.Angle(myTransform.position, punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position) <= 90.2f)
+			{
+				turning = false;
+				walking = true;
+			}
 		}
 		else if (walking)
 		{
@@ -79,7 +85,7 @@ public class WaechterMovement2 : MonoBehaviour {
 	
 	IEnumerator turnTimer(float timer)
 	{
-		float time = Time.time;
+		//float time = Time.time;
 		yield return new WaitForSeconds(timer);
 		turning = false;
 		walking = true;
@@ -88,7 +94,8 @@ public class WaechterMovement2 : MonoBehaviour {
 
 	private void turn()
 	{
-		Quaternion targetRotation = Quaternion.FromToRotation(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position) * myTransform.rotation;
+		//Debug.Log ("myTransform.forward: "+myTransform.forward+"  Richtung: "+);
+		Quaternion targetRotation = Quaternion.FromToRotation(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position - myTransform.position) * myTransform.rotation;
 		myTransform.rotation = Quaternion.Slerp(myTransform.rotation,targetRotation,turnSpeed * Time.deltaTime );
 	}
 	

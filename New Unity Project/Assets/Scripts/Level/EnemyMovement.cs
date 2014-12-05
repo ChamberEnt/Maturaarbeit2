@@ -8,101 +8,34 @@ public class EnemyMovement : MonoBehaviour {
 
 	 vermutlich brauche ich auch nicht zwei IEnumerators. Ich hatte nur angst, dass sich die Coroutines ineinander "Stapeln" was eigentlich nicht passieren sollte 
 	*/
-	public static bool startBool; // um bewegung des Gegners zu starten auf true setzen
 	public float turnSpeed; //Drehgeschwindigkeit (in s/90Grad )
-	public static Transform myTransform; //Position + Rotation + Grösse
+	public Transform myTransform; //Position + Rotation + Grösse
 	private bool turning; //ob das Objekt sich dreht
-	public float[] turningPath = new float[4]; //Liste mit den Drehwinkeln
-	private int patroullienZaehler; //Zähler um durch die oberen Listen zugehen
+	public float rotationAngle; //Liste mit den Drehwinkeln
 	private Quaternion startRot; //Anfangsrotation
-	private Quaternion oldRotation; //Rotation an der das erste mahl gelaufen wurde
+	private float changeDirection;
 	
 	void Start ()
 	{
-		patroullienZaehler = 0;
-		startBool = false;
-		turning = false;
+		turning = true;
 		myTransform = transform;
-	}
-
-	void Update ()
-	{
-
-		if (startBool)
-		{
-			startRot = myTransform.rotation;
-			StartCoroutine (TurnTimer (turningPath[0]));
-		}
+		startRot = myTransform.rotation;
+		changeDirection = -1;
 	}
 
 	void FixedUpdate () 
 	{
 		if (turning)
 		{
-			if(Quaternion.Angle(myTransform.rotation, oldRotation) < turningPath[patroullienZaehler])
+			transform.RotateAround(myTransform.position, myTransform.position, turnSpeed * Time.deltaTime * changeDirection);
+			if(Quaternion.Angle(myTransform.rotation, startRot) >= rotationAngle)
 			{
-				if (turningPath[patroullienZaehler] > 180)
-				{
-					if(Quaternion.Angle(myTransform.rotation, oldRotation) <= 360 - turningPath[patroullienZaehler])
-					{
-						transform.RotateAround(myTransform.position, -myTransform.position, turnSpeed * Time.deltaTime * 90f);
-					}
-				}
-				else
-				{
-					transform.RotateAround(myTransform.position, myTransform.position, turnSpeed * Time.deltaTime * 90f);
-				}
+				changeDirection = 1;
 			}
-		}
-		
-	}
-
-	IEnumerator TurnTimer(float angle)
-	{
-		oldRotation = myTransform.rotation;
-		turning = true;
-		double p = angle/(90f*turnSpeed);
-		Debug.Log("Time TT1: "+ p);
-		yield return new WaitForSeconds(angle/(90f*turnSpeed));
-		turning = false;
-		patroullienZaehler =  (patroullienZaehler+1)%(turningPath.Length);
-
-		if (patroullienZaehler == 0)
-		{
-			myTransform.rotation = startRot;
-		}
-		if(turningPath[patroullienZaehler] > 180)
-		{
-			StartCoroutine(TurnTimer (360 - turningPath[patroullienZaehler]));
-		}
-		else
-		{
-			StartCoroutine(TurnTimer2 (turningPath[patroullienZaehler]));
-		}
-	}
-
-	IEnumerator TurnTimer2(float angle)
-	{
-		oldRotation = myTransform.rotation;
-		turning = true;
-		double p = angle/(90f*turnSpeed);
-		Debug.Log("Time TT2: "+ p);
-		yield return new WaitForSeconds(angle/(90f*turnSpeed));
-		turning = false;
-		patroullienZaehler =  (patroullienZaehler+1)%(turningPath.Length);
-		
-		if (patroullienZaehler == 0)
-		{
-			myTransform.rotation = startRot;
-		}
-
-		if(turningPath[patroullienZaehler] > 180)
-		{
-			StartCoroutine(TurnTimer (360 - turningPath[patroullienZaehler]));
-		}
-		else
-		{
-			StartCoroutine(TurnTimer (turningPath[patroullienZaehler]));
-		}
+			else if(myTransform.rotation == startRot)
+			{
+				changeDirection = -1;
+			}
+		}	
 	}
 }

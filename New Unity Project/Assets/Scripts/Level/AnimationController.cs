@@ -9,7 +9,7 @@ public class AnimationController : MonoBehaviour {
 		animation["jumpStart"].layer = 1;
 		animation["jumpEnd"].wrapMode = WrapMode.Once;
 		animation["jumpEnd"].layer = 1;
-		//animation["Rollen2"].layer = 1;
+		animation["Rollen2"].layer = 1;
 	}
 
 	void Update ()
@@ -31,10 +31,15 @@ public class AnimationController : MonoBehaviour {
 		{
 			sphere.SetBlendShapeWeight(0, 100);
 			GetComponentInParent<CapsuleCollider>().radius = 0.65f;
-			PlayerController.setDeltaGround(1.125f);
+			PlayerController.setDeltaGround(1.25f);
 			if(PlayerController.returnWalking())
 			{
 				animation.Play ("Rollen2");
+			}
+			else if (animation.IsPlaying("Rollen2"))
+			{
+				animation.Stop();
+				animation.CrossFade("idle1");
 			}
 		}
 		else if(sphere.GetBlendShapeWeight(0) == 100)

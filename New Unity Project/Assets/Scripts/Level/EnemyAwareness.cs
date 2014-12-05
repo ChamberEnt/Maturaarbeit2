@@ -21,7 +21,10 @@ public class EnemyAwareness : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		CanSeePlayer();
+		if(Level1.returnEnemysEnabeled())
+		{
+			CanSeePlayer();
+		}
 	}
 
 	private void CanSeePlayer()
@@ -32,7 +35,7 @@ public class EnemyAwareness : MonoBehaviour {
 		Physics.Raycast(myTransform.position*1.01f, rayDirection, out hit);
 
 		Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.cyan);
-		if ((Vector3.Angle(rayDirection, myTransform.forward)) <= fieldOfViewDegrees * 0.5f)
+		if ((Vector3.Angle(rayDirection, myTransform.forward)) <= fieldOfViewDegrees * 0.5f && hit.distance != 0)
 		{
 			if (hit.distance <= visibilityDistance)
 			{

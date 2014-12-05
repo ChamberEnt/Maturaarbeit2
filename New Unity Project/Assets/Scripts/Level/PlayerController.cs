@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 		jump = false;
 		jumping = false;
 		walking = false;
-		hasKey = true;///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! false nach einfügen des Schlüssels
+		hasKey = false;
 
 		beginMyScale = new Vector3(1,1,1);
 		deltaGround = 1.1f;
@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour {
 		//Debug.Log (""+hit.distance);
 		
 		//*****************************************************************************************Walking
+		//Debug.Log (myTransform.position + transform.TransformDirection(moveDirection));
 		if (moveDirection == Vector3.zero && isGrounded)
 		{
 			setVelocityToZero();
@@ -99,11 +100,13 @@ public class PlayerController : MonoBehaviour {
 			// aus: https://www.youtube.com/watch?v=gHeQ8Hr92P4)
 			if (roll)
 			{
-				rigidbody.MovePosition(myTransform.position + transform.TransformDirection(moveDirection)*moveSpeed*Time.deltaTime*7); //problem mit local moveDirection (drehen) anscheinend nicht mit local moveDirection sondern mit dem Attractor ein problem EDIT: wut?
+				myTransform.position += transform.TransformDirection(moveDirection)*moveSpeed*Time.deltaTime*7; //problem mit local moveDirection (drehen) anscheinend nicht mit local moveDirection sondern mit dem Attractor ein problem EDIT: wut?
 			}
 			else
 			{
-				rigidbody.MovePosition(myTransform.position + transform.TransformDirection(moveDirection)*moveSpeed*Time.deltaTime);
+				//Debug.Log ("vorher "+(myTransform.position*100000));
+				myTransform.position += transform.TransformDirection(moveDirection)*moveSpeed*Time.deltaTime;
+				//Debug.Log ("nachher "+(myTransform.position*100000));
 			}
 		}
 		

@@ -24,7 +24,7 @@ public class EindunkelnScript : MonoBehaviour {
 
 	IEnumerator darkenTimer()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(7);
 		eindunkeln = false;
 		done = true;
 	}
@@ -35,6 +35,7 @@ public class EindunkelnScript : MonoBehaviour {
 		{
 			StartCoroutine(darkenTimer());
 			eindunkeln = true;
+			RenderSettings.fogEndDistance = 30.5f;
 		}
 	}
 

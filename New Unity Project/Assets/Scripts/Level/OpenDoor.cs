@@ -11,7 +11,6 @@ public class OpenDoor : MonoBehaviour {
 		{
 			if (PlayerController.returnHasKey())
 			{
-				Debug.Log ("Door open");
 				Destroy(this.GetComponentInParent<MeshCollider>());
 				Destroy(this.GetComponentInParent<MeshRenderer>());
 			}

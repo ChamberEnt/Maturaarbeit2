@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CameraHeight : MonoBehaviour {
 
-	private float groundLevel;
-	private Transform myTransform;
+	private static float groundLevel;
+	private static Transform myTransform;
 	
 	void Start ()
 	{
@@ -14,11 +14,12 @@ public class CameraHeight : MonoBehaviour {
 
 	void Update ()
 	{
+		//Debug.Log ("currentGroundLevel: "+groundLevel);
 		myTransform.localPosition = new Vector3(0, groundLevel-PlayerController.returnMyPosition().magnitude, 0);
 	}
 
-	void ChangeHeight()
+	public static void setHeight(float newGroundlevel)
 	{
-
+		groundLevel = newGroundlevel;
 	}
 }
