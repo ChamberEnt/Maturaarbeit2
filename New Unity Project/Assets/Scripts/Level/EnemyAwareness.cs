@@ -10,8 +10,6 @@ public class EnemyAwareness : MonoBehaviour {
 	void Start ()
 	{
 		myTransform = transform;
-		fieldOfViewDegrees = 58;
-		visibilityDistance = 4.15f;
 	}
 
 	void Update () {
@@ -31,15 +29,16 @@ public class EnemyAwareness : MonoBehaviour {
 	{
 		GameObject Player = GameObject.Find("Player");
 		RaycastHit hit;
-		Vector3 rayDirection = (Player.transform.position - myTransform.transform.position*1.01f).normalized;
+		Vector3 rayDirection = (Player.transform.position - myTransform.position*1.01f).normalized;
 		Physics.Raycast(myTransform.position*1.01f, rayDirection, out hit);
 
 		Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.cyan);
-		if ((Vector3.Angle(rayDirection, myTransform.forward)) <= fieldOfViewDegrees * 0.5f && hit.distance != 0)
+		if (Vector3.Angle(rayDirection, myTransform.forward) <= fieldOfViewDegrees * 0.5f && hit.distance != 0)
 		{
 			if (hit.distance <= visibilityDistance)
 			{
-				Debug.DrawLine(myTransform.position, hit.point, Color.red);
+				Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.red);
+
 				if(hit.transform.CompareTag("Player"))
 				{
 					Level1.setCanSeePlayer(true);

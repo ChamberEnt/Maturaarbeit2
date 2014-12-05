@@ -78,6 +78,9 @@ public class Level1 : MonoBehaviour {
 			if (first)
 			{
 				GameObject.Find("Level").GetComponent<EindunkelnScript>().darken ();
+				GameObject.Find("Player").GetComponent<SoundManager>().startScream();
+				//for(){}
+				//Gameobject.light.color = Color.red;
 				StartCoroutine(GameOverTimer());
 			}
 		}
@@ -103,7 +106,6 @@ public class Level1 : MonoBehaviour {
 
 	void GameOver(int cause)
 	{
-		MenuGameOver.setCause(cause);
 		Application.LoadLevel(2);
 	}
 
