@@ -3,7 +3,9 @@ using System.Collections;
 
 public class AnimationController : MonoBehaviour {
 
-	void Start () {
+	//Setzt die Animationen auf die richtigen Ebenen und die richtige widerhohlungsart.
+	void Start ()
+	{
 		animation.wrapMode = WrapMode.Loop;
 		animation["jumpStart"].wrapMode = WrapMode.Once;
 		animation["jumpStart"].layer = 1;
@@ -12,6 +14,7 @@ public class AnimationController : MonoBehaviour {
 		animation["Rollen2"].layer = 1;
 	}
 
+	//Startet die richtige Animation im richtigen Moment
 	void Update ()
 	{
 		float multyplier = CharacterScaler.returnMultiplyer();

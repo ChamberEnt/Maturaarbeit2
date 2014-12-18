@@ -2,11 +2,10 @@
 using System.Collections;
 
 public class OpenDoor : MonoBehaviour {
-	
-	void Start () {
-	
-	}
-	void OnTriggerStay(Collider other) {
+
+	//"öfffnet" bei Berührung die Türe, zerstört 
+	void OnTriggerEnter(Collider other)
+	{
 		if (other.tag == "Player")
 		{
 			if (PlayerController.returnHasKey())

@@ -4,17 +4,14 @@ using System;
 
 public class EnemyMovement : MonoBehaviour {
 
-	/* ACHTUNG! im moment nur rotation, werde noch bewegung mit erweitertem Skript machen (extends) 
-
-	 vermutlich brauche ich auch nicht zwei IEnumerators. Ich hatte nur angst, dass sich die Coroutines ineinander "Stapeln" was eigentlich nicht passieren sollte 
-	*/
 	public float turnSpeed; //Drehgeschwindigkeit (in s/90Grad )
 	public Transform myTransform; //Position + Rotation + Grösse
 	private bool turning; //ob das Objekt sich dreht
-	public float rotationAngle; //Liste mit den Drehwinkeln
+	public float rotationAngle; //Drehwinkel
 	private Quaternion startRot; //Anfangsrotation
-	private float changeDirection;
-	
+	private float changeDirection; //in welche richtung gedreht wird, wechselt immer zwischen 1 und -1
+
+	//Initialisierung
 	void Start ()
 	{
 		turning = true;
@@ -23,6 +20,7 @@ public class EnemyMovement : MonoBehaviour {
 		changeDirection = -1;
 	}
 
+	//dreht die Kamera um den rotationAngle und wechselt danach die Richtung
 	void FixedUpdate () 
 	{
 		if (turning)

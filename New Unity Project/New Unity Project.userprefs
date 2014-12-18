@@ -1,14 +1,31 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\EnemyAwareness.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\CharacterScaler.cs">
     <Files>
-      <File FileName="Assets\Scripts\Level\SoundManager.cs" Line="33" Column="35" />
-      <File FileName="Assets\Scripts\Level\EnemyAwareness.cs" Line="8" Column="63" />
-      <File FileName="Assets\Scripts\Level\Level1.cs" Line="81" Column="74" />
+      <File FileName="Assets\Scripts\Level\CharacterScaler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\AnimationController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\AnimationDirection.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\Attractor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\Body.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\BodyNotPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\CameraHeight.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\DeathSphere.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level\DestroyThis.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\DoorTeleporter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\EindunkelnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\EndGameScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\EnemyAwareness.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\KeyCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\Level1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\LevelComplete.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\ObjectTeleport.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\OpenDoor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\PlayerController.cs" Line="28" Column="18" />
+      <File FileName="Assets\Scripts\Level\SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\WaechterMovement2.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Menus\MenuIntro.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level\ExplorationMode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menus\StoryScreen.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -2,32 +2,21 @@
 using System.Collections;
 
 public class SoundManager : MonoBehaviour {
-	private AudioSource scream;
-	private AudioSource piano1;
-	private AudioSource piano2;
 
+	private AudioSource scream; //geräusch der Wächter bei Entdeckeung
+	private AudioSource piano1; //Tonspur 1
+	private AudioSource piano2; //Tonspur 2
+
+	//Initialisierung
 	void Start ()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource>();
 		piano1 = audioSources[0];
 		piano2 = audioSources[1];
 		scream = audioSources[2];
-		//time = Time.time;
-	
 	}
 
-//	void Update ()
-//	{
-//		if(!scream.isPlaying)
-//		{
-//			if (Random.value > 0.99f)
-//			{
-//				time = Time.time - time;
-//				scream.Play();
-//				time = Time.time;
-//			}
-//		}
-//	}
+	//stoppt die beiden Tonspuren und löst den scream aus
 	public void startScream()
 	{
 		scream.PlayScheduled(Time.time);

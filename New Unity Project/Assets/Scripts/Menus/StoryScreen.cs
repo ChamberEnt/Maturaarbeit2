@@ -5,11 +5,11 @@ using System.IO;
 using System;
 
 public class StoryScreen : MonoBehaviour {
-	private string story;
 
+	//zeigt den Text an
 	void OnGUI()
 	{
-		GUILayout.BeginArea(new Rect(Screen.width*0.1f,Screen.height*0.1f,Screen.width-Screen.width*0.1f,Screen.height-Screen.height*0.1f));
+		GUILayout.BeginArea(new Rect(Screen.width*0.1f,Screen.height*0.1f,Screen.width-Screen.width*0.2f,Screen.height-Screen.height*0.2f));
 		{
 			GUILayout.BeginVertical();
 			{
@@ -22,12 +22,7 @@ public class StoryScreen : MonoBehaviour {
 		GUILayout.EndArea();
 	}
 
-	/*
-	void Start()
-	{
-		story = Load("/Text/StoryEN.txt");
-	}
-	*/
+	//springt bei Eingabe zur Szene Menu
 	void Update ()
 	{
 		if(Input.anyKey)
@@ -35,36 +30,4 @@ public class StoryScreen : MonoBehaviour {
 			Application.LoadLevel(1);
 		}
 	}
-	/*
-	//aus: http://answers.unity3d.com/questions/279750/loading-data-from-a-txt-file-c.html
-	private string Load(string fileName)
-	{
-		try
-		{
-			string file = "";
-			StreamReader theReader = new StreamReader(Application.dataPath+fileName, Encoding.Default);
-			using (theReader)
-			{
-				string line;
-				do
-				{
-					line = theReader.ReadLine();
-					
-					if (line != null)
-					{
-						file += line+"\n";
-					}
-				}
-				while (line != null);
-				theReader.Close();
-				return file;
-			}
-		}
-		catch (Exception e)
-		{
-			Console.WriteLine("{0}\n", e.Message);
-			return "Error";
-		}
-	}
-	*/
 }

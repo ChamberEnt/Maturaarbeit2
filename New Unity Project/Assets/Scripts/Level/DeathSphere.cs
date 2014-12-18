@@ -2,17 +2,17 @@
 using System.Collections;
 
 public class DeathSphere : MonoBehaviour {
-	private Collider player;
 
+	//Bei zusammenstoss mit dem Spielcharakter wird eingedunkelt (EindunkelnScript.darken()) und das Level nach 3 Sekunden neu geladen (Level.GameOver())
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			player = other;
 			GameObject.Find("Level").GetComponent<EindunkelnScript>().darken();
 			StartCoroutine(GameOverTimer());
 		}
 	}
+
 	IEnumerator GameOverTimer()
 	{
 		yield return new WaitForSeconds(3);

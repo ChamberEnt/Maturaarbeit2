@@ -3,6 +3,7 @@ using System.Collections;
 
 public class KeyCollider : MonoBehaviour {
 
+	//Zerstört bei berührung des Spielers den Schlüssel und im PlayerController wird hasKey auf true gesetzt
 	void OnTriggerEnter (Collider other) 
 	{
 		if (other.gameObject.tag == "Player")

@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CharacterScaler : MonoBehaviour {
 	
-	private Transform myTransform;
-	private static float multiplyer;
-	//private static float currentMultiplyer;
-	private float startMagnitude;
+	private Transform myTransform; //Position + Rotation + Grösse
+	private static float multiplyer; //Multiplikator an dem die Skalierung des Spielcharakters angepasst wird
+	private float startMagnitude; //Startwert für myTransform.position.magnitude
 
+	//Initialisierung
 	void Start ()
 	{
 		myTransform = transform;
@@ -15,24 +15,14 @@ public class CharacterScaler : MonoBehaviour {
 		multiplyer = 1;
 	}
 
+	//Anpassung der Skalierung
 	void FixedUpdate ()
 	{
 		float xyz = myTransform.position.magnitude/startMagnitude;
 		myTransform.localScale = new Vector3(xyz, 1, xyz);
-		//multiplyer = myTransform.position.magnitude/startMagnitude;
-		//PlayerController.multiplyAll(multiplyer);
-		//Debug.Log ("multiplyer: "+(myTransform.position.magnitude/startMagnitude));
-		/*
-		multiplyer = myTransform.position.magnitude/startMagnitude;
-		if(currentMultiplyer >= multiplyer*1.1 || currentMultiplyer <= multiplyer*0.9)
-		{
-			Debug.Log ("new currentMultiplyer set: "+multiplyer);
-			currentMultiplyer = multiplyer;
-			PlayerController.multiplyAll(multiplyer);
-		}
-		*/
 	}
 
+	//Gibt den momentanen Multiplikator zurück
 	public static float returnMultiplyer()
 	{
 		return multiplyer;

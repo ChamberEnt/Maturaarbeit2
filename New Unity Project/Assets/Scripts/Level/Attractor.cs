@@ -5,6 +5,7 @@ public class Attractor : MonoBehaviour {
 	
 	public float gravity; //Gravitationsstärke (muss negativ sein)
 	
+	//zieht den übergebenen body nach unten, simuliert die Schwerkraft
 	public void Attract(Transform body, bool isGrounded) 
 	{
 		// aus: https://www.youtube.com/watch?v=gHeQ8Hr92P4)

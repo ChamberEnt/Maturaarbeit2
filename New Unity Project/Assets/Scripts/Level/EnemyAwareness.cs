@@ -7,16 +7,13 @@ public class EnemyAwareness : MonoBehaviour {
 	public float visibilityDistance; //Sichtweite
 	private Transform myTransform; //Position + Rotation + Grösse
 
+	//Initialisierung
 	void Start ()
 	{
 		myTransform = transform;
 	}
 
-	void Update () {
-		Vector3 localForward = transform.forward*visibilityDistance+transform.position;
-		Debug.DrawLine(transform.position, localForward, Color.green);
-	}
-
+	//führt CanSeePlayer() aus.
 	void FixedUpdate()
 	{
 		if(Level1.returnEnemysEnabeled())
@@ -25,20 +22,18 @@ public class EnemyAwareness : MonoBehaviour {
 		}
 	}
 
+	//überprüft ob der Spieler im Winkel fieldOfViewDegrees vor dem Gegner steht, danach wird überprüft ob er in sichtweite (visibilityDistance) ist.
+	//Stimmt beides wird im Level1 canSeePlayer auf true gesetzt.
 	private void CanSeePlayer()
 	{
 		GameObject Player = GameObject.Find("Player");
 		RaycastHit hit;
 		Vector3 rayDirection = (Player.transform.position - myTransform.position*1.01f).normalized;
 		Physics.Raycast(myTransform.position*1.01f, rayDirection, out hit);
-
-		Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.cyan);
 		if (Vector3.Angle(rayDirection, myTransform.forward) <= fieldOfViewDegrees * 0.5f && hit.distance != 0)
 		{
 			if (hit.distance <= visibilityDistance)
 			{
-				Debug.DrawLine(myTransform.position*1.01f, hit.point, Color.red);
-
 				if(hit.transform.CompareTag("Player"))
 				{
 					Level1.setCanSeePlayer(true);

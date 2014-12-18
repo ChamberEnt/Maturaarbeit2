@@ -3,33 +3,29 @@ using System.Collections;
 
 public class WaechterMovement2 : MonoBehaviour {
 	
-	private int anzahlPunkte;
-	private GameObject[] punkte;
-	private int zaehler;
-	private float turnSpeed;
-	private Transform myTransform;
-	private float moveSpeed;
-	private float maxSpeed;
-	private bool turning;
-	private bool walking;
-	private bool startTurning;
-	private bool isGrounded;
-	
-	void Awake () {
+	private int anzahlPunkte; //anzahl der Elemente in punkte
+	private GameObject[] punkte; //Patrouillenpunkte
+	private int zaehler; //zähler, an welchem Patrouillenpunkt der Wächter steht
+	private float turnSpeed; //Drehgeschwindigkeit
+	private Transform myTransform; //Position + Rotation + Skalierung
+	private float moveSpeed; //Bewegungsgeschwindigkeit
+	private bool turning; // ob gedreht wird
+	private bool walking; //ob gelaufen wird
+	private bool startTurning; //ob angefangen wird zu drehen
+	private bool isGrounded;	//ob der Wächter sich am boden befindet
+
+	//Initialisierung
+	void Awake ()
+	{
 		turnSpeed = 1;
 		moveSpeed = 5;
 		myTransform = transform;
-		maxSpeed = moveSpeed*2;
 		zaehler = 0;
 		walking = false;
-		//		punkte = Level1.returnPunkte();
-		//		anzahlPunkte = punkte.GetLength(0);
-		//		myTransform.position = punkte[zaehler].GetComponent<Transform>().position;
-		//		startTurning = true;
-		//		turning = true;
-		
 	}
-	
+
+	//überprüft ob der Punkt nach dem aktuellen Punkt in der Liste ereicht wurde und setzt den zähler eines hoch bei true(zaehler +1) und wechselt von wakling auf turning
+	//überprüft ob sich der Wächter am Bofden befindet (isGrounded Update) und setzt is Grounded danach
 	void Update ()
 	{
 		if (punkte != null)
@@ -45,8 +41,8 @@ public class WaechterMovement2 : MonoBehaviour {
 			}
 			Ray ray;
 			RaycastHit hit;
-			ray = new Ray(myTransform.position, -myTransform.position); // origin, direction of ray
-			Physics.Raycast(ray, out hit); // cast ray downwards
+			ray = new Ray(myTransform.position, -myTransform.position);
+			Physics.Raycast(ray, out hit);
 			if (hit.distance <= 0.1f)
 			{
 				isGrounded = true;
@@ -56,21 +52,19 @@ public class WaechterMovement2 : MonoBehaviour {
 				isGrounded = false;
 			}
 		}
-		
 	}
-	
+
+	//dreht oder läuft, je nach werte der walking und turning Parameter
 	void FixedUpdate()
 	{
 		if(startTurning)
 		{
 			turn ();
 			startTurning = false;
-			//StartCoroutine(turnTimer((Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position)/90)/(turnSpeed/16)));
 		}
 		else if (turning)
 		{
 			turn ();
-			//Debug.Log (Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position)+Vector3.Angle(myTransform.position, punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position));
 			if(Vector3.Angle(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position)+Vector3.Angle(myTransform.position, punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position) <= 90.2f)
 			{
 				turning = false;
@@ -82,23 +76,15 @@ public class WaechterMovement2 : MonoBehaviour {
 			rigidbody.AddForce((punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position-myTransform.position).normalized*moveSpeed*10);
 		}
 	}
-	
-	IEnumerator turnTimer(float timer)
-	{
-		//float time = Time.time;
-		yield return new WaitForSeconds(timer);
-		turning = false;
-		walking = true;
-		StopCoroutine(turnTimer(1));
-	}
 
+	//dreht
 	private void turn()
 	{
-		//Debug.Log ("myTransform.forward: "+myTransform.forward+"  Richtung: "+);
 		Quaternion targetRotation = Quaternion.FromToRotation(myTransform.forward,punkte[(zaehler+1)%anzahlPunkte].GetComponent<Transform>().position - myTransform.position) * myTransform.rotation;
 		myTransform.rotation = Quaternion.Slerp(myTransform.rotation,targetRotation,turnSpeed * Time.deltaTime );
 	}
-	
+
+	//setzt eine neues Array in punkte
 	public void setPunkte(GameObject[] newPunkte)
 	{
 		punkte = newPunkte;
@@ -107,7 +93,8 @@ public class WaechterMovement2 : MonoBehaviour {
 		startTurning = true;
 		turning = true;
 	}
-	
+
+	//gibt isGrounded zurück
 	public bool returnIsGrounded()
 	{
 		return isGrounded;

@@ -3,8 +3,7 @@ using System.Collections;
 
 public class MenuIntro : MonoBehaviour {
 
-	//private static bool enemysEnabeled;
-
+	//zeigt den Text und die Buttons an, ladet bei den jeweiligen Buttons das zugehöhrige Level.
 	void OnGUI()
 	{
 		GUI.Label (new Rect(Screen.width/2-75,20,150,30),"Welcome to MAVERICK");
