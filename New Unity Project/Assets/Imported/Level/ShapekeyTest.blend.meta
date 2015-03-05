@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 15c0218ad21cc4152aad39fef398d852
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: 1_Bottom
+    100002: 1_Cube
+    100004: 1_Finish
+    100006: 1_Meshdeform
+    100008: 1_Start
+    100010: 1_Top
+    100012: 2_Cubes
+    100014: 2_Meshdeform
+    100016: 3_Cube
+    100018: 3_Cube_001
+    100020: 3_eBend1
+    100022: 3_eBend2
+    100024: 3_EndCap
+    100026: Cube
+    100028: ScaleLimit
+    100030: ScaleLimit_001
+    100032: //RootNode
+    400000: 1_Bottom
+    400002: 1_Cube
+    400004: 1_Finish
+    400006: 1_Meshdeform
+    400008: 1_Start
+    400010: 1_Top
+    400012: 2_Cubes
+    400014: 2_Meshdeform
+    400016: 3_Cube
+    400018: 3_Cube_001
+    400020: 3_eBend1
+    400022: 3_eBend2
+    400024: 3_EndCap
+    400026: Cube
+    400028: ScaleLimit
+    400030: ScaleLimit_001
+    400032: //RootNode
+    2300000: 1_Cube
+    2300002: 1_Finish
+    2300004: 1_Start
+    2300006: 2_Cubes
+    2300008: 3_Cube
+    2300010: 3_Cube_001
+    2300012: 3_EndCap
+    2300014: Cube
+    2300016: ScaleLimit
+    2300018: ScaleLimit_001
+    3300000: 1_Cube
+    3300002: 1_Finish
+    3300004: 1_Start
+    3300006: 2_Cubes
+    3300008: 3_Cube
+    3300010: 3_Cube_001
+    3300012: 3_EndCap
+    3300014: Cube
+    3300016: ScaleLimit
+    3300018: ScaleLimit_001
+    4300000: Cube
+    4300002: 3_EndCap
+    4300004: 3_Cube_001
+    4300006: 3_Cube
+    4300008: 2_Meshdeform
+    4300010: 2_Cubes
+    4300012: 1_Meshdeform
+    4300014: 1_Cube
+    4300016: ScaleLimit_001
+    4300018: 1_Finish
+    4300020: 1_Start
+    4300022: ScaleLimit
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: 1_Meshdeform
+    13700002: 2_Meshdeform
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
